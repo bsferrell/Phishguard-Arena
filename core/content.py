@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from models import (
+from core.models import (
     DECOYS_PER_ROUND, WARNING_SIGNS, KnowledgePassage, Scenario,
 )
 
