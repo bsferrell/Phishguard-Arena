@@ -1,0 +1,110 @@
+[
+  {
+    "policy_id": "POLICY-DOMAIN01",
+    "title": "Suspicious URLs and Unverified Links",
+    "tags": [
+      "Suspicious_URL"
+    ],
+    "body": "Fozer Memorial Hospital prohibits staff from clicking unverified, shortened, or unfamiliar web addresses received through email or text messages. Legitimate hospital resources are hosted on official domains such as fozermemorial.org and portal.fozermemorial.org. URLs containing raw IP addresses, random character strings, or unfamiliar external domains pose a serious security risk to our Microsoft 365 and PayGet environments. Before clicking any link, hover over it to inspect the full destination address. If a URL looks suspicious or does not match an authorized hospital resource, do not open it and immediately report the message to IT via AssistPoint."
+  },
+  {
+    "policy_id": "POLICY-DOMAIN02",
+    "title": "Lookalike and Spoofed Domains",
+    "tags": [
+      "Lookalike_Domain"
+    ],
+    "body": "All official electronic communications from Fozer Memorial Hospital originate exclusively from the fozermemorial.org domain, and internal applications are accessed through portal.fozermemorial.org. Attackers frequently register lookalike domains that alter letters, substitute numbers, or add hyphens to impersonate IT, HR, Billing, or Pharmacy. Employees must never trust messages or login pages using deceptive lookalike addresses. Always examine sender addresses and web links character by character before taking action. If you spot a lookalike domain, do not reply or click any links, and report the message to IT using AssistPoint immediately."
+  },
+  {
+    "policy_id": "POLICY-DATA01",
+    "title": "Requests for Sensitive Information",
+    "tags": [
+      "Sensitive_Information_Request"
+    ],
+    "body": "Fozer Memorial Hospital personnel must not share sensitive personal, financial, or protected health information via unverified email or text messages. Neither HR nor Billing will ask employees to reply with Social Security numbers, bank routing details, or confidential payroll records outside the secure PayGet platform on portal.fozermemorial.org. Any unexpected request for sensitive data must be treated as a potential security threat. When you receive such a request, do not send any records or personal details. Verify the inquiry directly with the requesting department using an internal directory number, and submit a security ticket in AssistPoint."
+  },
+  {
+    "policy_id": "POLICY-DATA02",
+    "title": "Unexpected Requests for Credentials",
+    "tags": [
+      "Unexpected_Request_for_Credentials"
+    ],
+    "body": "Your Microsoft 365, PayGet, and AssistPoint login credentials are strictly confidential and must never be shared with anyone, including IT or HR staff. Fozer Memorial Hospital will never send an email or SMS asking you to reply with your password, PIN, or multifactor authentication code, nor demand an unexpected password reset through an external link. If you receive an unexpected request for credentials, close the message without entering any information. Always sign in by typing portal.fozermemorial.org directly into your browser, and report the credential-harvesting attempt to IT immediately through AssistPoint."
+  },
+  {
+    "policy_id": "POLICY-DATA03",
+    "title": "Handling Patient Data",
+    "tags": [
+      "Sensitive_Information_Request",
+      "Unexpected_Attachment",
+      "Odd_Sender",
+      "Urgent_Request"
+    ],
+    "body": "As a HIPAA-regulated inpatient facility, Fozer Memorial Hospital strictly prohibits transmitting or disclosing patient records through unapproved channels or in response to unverified messages. Staff in clinical units, Pharmacy, and Billing must never attach, forward, or verify patient medical record numbers, diagnoses, or billing histories for an unfamiliar sender or urgent external request. Before sharing any protected health information, confirm the recipient's fozermemorial.org identity and authorized business need through official hospital systems. If you receive a suspicious request involving patient records or unexpected file attachments, do not respond or open files, and notify IT and Compliance via AssistPoint immediately."
+  },
+  {
+    "policy_id": "POLICY-ATT01",
+    "title": "Unexpected Email Attachments",
+    "tags": [
+      "Unexpected_Attachment"
+    ],
+    "body": "Malicious email attachments, including macro-enabled spreadsheets, compressed archives, and HTML forms, are a primary method used to compromise hospital workstations. Employees at Fozer Memorial Hospital must not open, download, or enable macros in any unexpected attachment, even if the message claims to come from Billing, HR, Pharmacy, or PayGet. When an attachment arrives unexpectedly or lacks clear business context, contact the purported sender through Microsoft 365 Teams or by phone using a known internal extension before interacting with the file. If the attachment is unverified or suspicious, leave it unopened and report the email to IT via AssistPoint."
+  },
+  {
+    "policy_id": "POLICY-URG01",
+    "title": "Urgent and High-Pressure Requests",
+    "tags": [
+      "Urgent_Request"
+    ],
+    "body": "Phishing messages frequently use artificial urgency, countdown deadlines, or threats of Microsoft 365 account lockout and PayGet payroll suspension to pressure employees into acting without checking details. Fozer Memorial Hospital departments do not threaten immediate disciplinary action or paycheck cancellation via unsolicited email or SMS. Staff must never bypass standard verification procedures because a message demands immediate action. Pause and review the sender address and links carefully whenever a message creates a sense of panic. Verify any supposedly urgent request through portal.fozermemorial.org or a direct phone call to the department, and report coercive messages to IT in AssistPoint."
+  },
+  {
+    "policy_id": "POLICY-LINK01",
+    "title": "Mismatched Hyperlinks",
+    "tags": [
+      "Mismatched_Link"
+    ],
+    "body": "Attackers often disguise malicious destinations by displaying trusted text, such as portal.fozermemorial.org, as the visible label of a hyperlink while routing the actual URL to an external server. Fozer Memorial Hospital employees are prohibited from clicking any link whose visible web address does not exactly match its underlying destination URL. Before selecting a hyperlink in Microsoft 365 Outlook or any hospital message, hover your cursor over the link or long-press on a mobile device to inspect the true target address. If the displayed text and destination URL differ, do not click the link and report the message to IT via AssistPoint."
+  },
+  {
+    "policy_id": "POLICY-GREET01",
+    "title": "Generic and Impersonal Greetings",
+    "tags": [
+      "Generic_Greeting"
+    ],
+    "body": "Internal notices regarding individual employee accounts, PayGet payroll records, or AssistPoint tickets from Fozer Memorial Hospital are normally addressed to you by name. Mass phishing campaigns frequently rely on generic greetings such as Dear User, Dear Employee, or Valued Staff Member because attackers lack accurate recipient records. While a generic greeting alone does not confirm malicious intent, employees must treat any action request featuring an impersonal salutation with heightened caution. Always inspect the sender's fozermemorial.org address, links, and attachments before complying. When an impersonal message asks for action, credentials, or sensitive data, do not respond and report it to IT via AssistPoint."
+  },
+  {
+    "policy_id": "POLICY-ODD01",
+    "title": "Odd or Unrecognized Senders",
+    "tags": [
+      "Odd_Sender"
+    ],
+    "body": "Authorized communications from Fozer Memorial Hospital departments, including IT, HR, Billing, and Pharmacy, will not come from free webmail providers, unrelated third-party domains, or unrecognized international phone numbers. Even when a display name reads PayGet Support or Hospital Helpdesk, the underlying email address or SMS number reveals the true sender. Employees must never fulfill requests or click links in messages from odd or mismatched sender addresses. Always expand the sender header in Microsoft 365 to verify the authentic fozermemorial.org domain. If the sender address appears unusual or unauthorized, do not reply and report the message to IT through AssistPoint."
+  },
+  {
+    "policy_id": "POLICY-RED01",
+    "title": "Unexpected URL Redirects",
+    "tags": [
+      "Unexpected_Redirect"
+    ],
+    "body": "Some phishing links begin with a seemingly legitimate domain, such as portal.fozermemorial.org, but include query parameters or tracking hops that redirect users to an external malicious website. Fozer Memorial Hospital employees must not proceed through unexpected redirects or enter Microsoft 365 or PayGet credentials on any page reached after a sudden third-party redirection. Before clicking, inspect the entire URL string for redirect parameters pointing outside fozermemorial.org. If a link redirects your browser to an unfamiliar external login page, close the tab immediately without entering data and submit a security report to IT via AssistPoint."
+  },
+  {
+    "policy_id": "POLICY-REP01",
+    "title": "Reporting Suspicious Messages",
+    "tags": [
+      "Suspicious_URL",
+      "Urgent_Request",
+      "Sensitive_Information_Request",
+      "Unexpected_Request_for_Credentials",
+      "Odd_Sender",
+      "Lookalike_Domain",
+      "Unexpected_Attachment",
+      "Unexpected_Redirect",
+      "Mismatched_Link",
+      "Generic_Greeting"
+    ],
+    "body": "Every Fozer Memorial Hospital employee is responsible for protecting HIPAA patient records and hospital systems by promptly reporting suspected phishing emails and SMS messages. Whenever you spot warning signs, such as odd senders, lookalike domains, generic greetings, urgent demands, mismatched or redirecting links, suspicious URLs, unexpected attachments, or requests for credentials or sensitive data, do not reply, click links, or forward the message to coworkers. Instead, use the Microsoft 365 phishing report button or log a ticket in AssistPoint via portal.fozermemorial.org immediately. If you accidentally clicked a link or entered credentials, contact IT at once so they can secure your account."
+  }
+]

@@ -1,0 +1,12 @@
+POLICY-DOMAIN01 Suspicious_URL
+POLICY-DOMAIN02 Lookalike_Domain
+POLICY-DATA01 Sensitive_Information_Request
+POLICY-DATA02 Unexpected_Request_for_Credentials
+POLICY-DATA03 Handling Patient Data
+POLICY-ATT01 Unexpected_Attachment
+POLICY-URG01 Urgent_Request
+POLICY-LINK01 Mismatched_Link
+POLICY-GREET01 Generic_Greeting
+POLICY-ODD01 Odd_Sender
+POLICY-RED01 Unexpected_Redirect
+POLICY-REP01 Reporting Suspicious Messages

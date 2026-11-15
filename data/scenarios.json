@@ -1,0 +1,180 @@
+[
+  {
+    "scenario_id": "SCEN-001",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 1,
+    "subject": "URGENT: PayGet Direct Deposit Suspended - Action Needed Now",
+    "body": "From: Payroll Support <payget-verify99@mail-alerts-center.com>\n\nDear Employee,\n\nYour PayGet direct deposit account has been flagged and suspended. You MUST verify your payroll profile within 1 hour or your upcoming paycheck will be permanently cancelled!!\n\nClick here right away: [Update Payroll Details](http://198.51.100.77/payget-login)\n\nThank you,\nPayroll Dept",
+    "warning_signs": [
+      "Odd_Sender",
+      "Generic_Greeting",
+      "Urgent_Request",
+      "Suspicious_URL"
+    ],
+    "decoy_signs": [
+      "Unexpected_Attachment",
+      "Mismatched_Link"
+    ],
+    "policy_refs": [
+      "POLICY-ODD01",
+      "POLICY-GREET01",
+      "POLICY-URG01",
+      "POLICY-DOMAIN01",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SCEN-002",
+    "channel": "sms",
+    "is_phishing": true,
+    "difficulty": 1,
+    "subject": "",
+    "body": "From: IT Helpdesk <+44-7700-900412>\n\nURGENT: Your Microsoft 365 password expires in 30 minutes and your hospital account will be locked. Reply to this text with your username and current password, or log in immediately at [Verify M365 Account](http://192.0.2.88/m365/login.php) to avoid suspension.",
+    "warning_signs": [
+      "Odd_Sender",
+      "Urgent_Request",
+      "Unexpected_Request_for_Credentials",
+      "Suspicious_URL"
+    ],
+    "decoy_signs": [
+      "Unexpected_Attachment",
+      "Generic_Greeting"
+    ],
+    "policy_refs": [
+      "POLICY-ODD01",
+      "POLICY-URG01",
+      "POLICY-DATA02",
+      "POLICY-DOMAIN01",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SCEN-003",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 2,
+    "subject": "AssistPoint Ticket #AP-4821: Payroll Tax Form Update",
+    "body": "From: AssistPoint Support <support@fozermemoria1.org>\n\nHi Marcus,\n\nA routine tax adjustment ticket (#AP-4821) was opened for your PayGet profile. Whenever you have a moment this week, please review the attached form and reply to this email with your full Social Security Number and date of birth so HR can finalize the record.\n\n[Attachment: PayGet_Tax_Adjustment_2026.xlsm]\n\nBest regards,\nAssistPoint Support Team",
+    "warning_signs": [
+      "Lookalike_Domain",
+      "Unexpected_Attachment",
+      "Sensitive_Information_Request"
+    ],
+    "decoy_signs": [
+      "Generic_Greeting",
+      "Urgent_Request"
+    ],
+    "policy_refs": [
+      "POLICY-DOMAIN02",
+      "POLICY-ATT01",
+      "POLICY-DATA01",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SCEN-004",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 3,
+    "subject": "AssistPoint Ticket #AP-9042 Updated: Pharmacy Inventory Access",
+    "body": "From: AssistPoint Notifications <assistpoint@fozermemorial.org>\n\nHi Elena,\n\nTicket #AP-9042 regarding your Pharmacy inventory module permissions has been updated by IT and is ready for your sign-off.\n\nPlease review the ticket details at your convenience using the link below:\n[https://portal.fozermemorial.org/tickets/AP-9042](https://portal.fozermemorial.org/sso?redirect=https://external-verify-auth.com/m365)\n\nThank you,\nFozer Memorial AssistPoint",
+    "warning_signs": [
+      "Mismatched_Link",
+      "Unexpected_Redirect"
+    ],
+    "decoy_signs": [
+      "Unexpected_Attachment",
+      "Generic_Greeting"
+    ],
+    "policy_refs": [
+      "POLICY-LINK01",
+      "POLICY-RED01",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SCEN-005",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 1,
+    "subject": "Employee Wellness: November Cafeteria Menu & Yoga Schedule",
+    "body": "From: Human Resources <hr@fozermemorial.org>\n\nHi David,\n\nHere is a quick look at next week's employee wellness offerings at Fozer Memorial Hospital:\n- Tuesday & Thursday: Guided stretching in Conference Room B at 12:15 PM\n- Wednesday: Autumn Harvest Soup & Salad Bar in the Main Cafeteria\n\nNo registration is needed. Have a great weekend!\n\nWarm regards,\nFozer Memorial HR Team",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Suspicious_URL",
+      "Unexpected_Attachment"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SCEN-006",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 1,
+    "subject": "Planned Weekend Maintenance: Staff Portal (Sunday 2:00 AM - 4:00 AM)",
+    "body": "From: IT Operations <it-ops@fozermemorial.org>\n\nHi Rachel,\n\nIT Operations will perform scheduled server maintenance this Sunday from 2:00 AM to 4:00 AM. During this window, the staff portal may be briefly unavailable, though clinical inpatient workstations and Microsoft 365 email will remain online.\n\nNo action is required on your part. You can check live system status anytime at [Staff Portal Status Page](https://portal.fozermemorial.org/status).\n\nThank you,\nIT Operations",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Urgent_Request",
+      "Unexpected_Request_for_Credentials"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SCEN-007",
+    "channel": "sms",
+    "is_phishing": false,
+    "difficulty": 1,
+    "subject": "",
+    "body": "From: Fozer Facilities <facilities@fozermemorial.org>\n\nHi Jordan, this is a friendly reminder from Facilities that the East Lot employee shuttle is running every 10 minutes today due to repaving on Main Street. Thank you for your patience.",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Generic_Greeting",
+      "Suspicious_URL"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SCEN-008",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 2,
+    "subject": "AssistPoint Ticket #AP-3319 Resolved: Pharmacy Printer Toner",
+    "body": "From: AssistPoint Helpdesk <assistpoint@fozermemorial.org>\n\nHi Priya,\n\nYour AssistPoint request (#AP-3319) for a toner replacement on the third-floor Pharmacy printer has been completed and marked as resolved.\n\nIf you need to reopen the ticket or view technician notes, you can access it directly in the portal:\n[https://portal.fozermemorial.org/assistpoint/AP-3319](https://portal.fozermemorial.org/assistpoint/AP-3319)\n\nThank you,\nFozer Memorial IT Helpdesk",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Mismatched_Link",
+      "Unexpected_Redirect"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SCEN-009",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 2,
+    "subject": "PayGet Notification: Your Biweekly Earnings Statement Is Ready",
+    "body": "From: Payroll Department <payroll@fozermemorial.org>\n\nHi Kevin,\n\nYour biweekly earnings statement for the November 1-14 pay period is now available in PayGet.\n\nTo view your pay stub, please sign in through the official staff portal as usual: [https://portal.fozermemorial.org/payget](https://portal.fozermemorial.org/payget)\n\nAs a reminder, Payroll will never ask for your password, PIN, or banking details via email.\n\nSincerely,\nBilling & Payroll Services",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Sensitive_Information_Request",
+      "Unexpected_Request_for_Credentials"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SCEN-010",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 3,
+    "subject": "Annual HIPAA Privacy & Microsoft 365 Security Refresher",
+    "body": "From: Compliance & HR <compliance@fozermemorial.org>\n\nHi Dr. Alvarez,\n\nOur training records indicate that your annual HIPAA Privacy and Microsoft 365 Security Refresher module is scheduled for completion by November 30.\n\nWhen your schedule permits, please navigate to the learning module through the hospital portal: [Annual Compliance Portal](https://portal.fozermemorial.org/learning/hipaa-2026).\n\nIf you completed this module within the past 48 hours, please disregard this notice while records finish syncing.\n\nThank you,\nOffice of Compliance & Human Resources",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Lookalike_Domain",
+      "Odd_Sender"
+    ],
+    "policy_refs": []
+  }
+]
