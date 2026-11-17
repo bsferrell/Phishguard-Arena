@@ -3,10 +3,10 @@ import random
 import streamlit as st
 
 from agents.tutor_basic import write_lesson
+from agents.orchestrator import choose_next
 from core import db
 from core.game import play_round
 from core.models import WARNING_SIGNS
-from core.picker import pick_next
 from core.scoring import Response
 
 OPTIONS_PER_ROUND = 6
@@ -20,7 +20,11 @@ state = st.session_state
 if "learner_id" not in state:
     state.learner_id = db.create_learner(conn)
 if "scenario_id" not in state:
-    state.scenario_id = pick_next(conn, state.learner_id).scenario_id
+    with st.spinner("Choosing your next message..."):
+        scenario_id, reason, from_agent = choose_next(conn, state.learner_id)
+    state.scenario_id = scenario_id
+    state.pick_reason = reason
+    state.pick_from_agent = from_agent
     state.result = None
     state.lesson = None
     state.round = state.get("round", 0) + 1
@@ -59,6 +63,11 @@ with st.sidebar:
         st.subheader("Mastery by warning sign")
         for sign, value in sorted(mastery.items(), key=lambda kv: kv[1]):
             st.progress(value, text=f"{label(sign)}: {value:.2f}")
+        st.divider()
+    if st.checkbox("Show agent notes"):
+        source = "Orchestrator" if state.pick_from_agent else "Python picker"
+        st.caption(f"Chosen by: {source}")
+        st.caption(state.pick_reason)
 
 # Main: the message
 st.title("PhishGuard Arena")
