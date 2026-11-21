@@ -178,7 +178,7 @@
     "policy_refs": []
   },
   {
-    "scenario_id": "SC-011",
+    "scenario_id": "SCEN-011",
     "channel": "email",
     "is_phishing": true,
     "difficulty": 2,
@@ -203,7 +203,7 @@
     ]
   },
   {
-    "scenario_id": "SC-012",
+    "scenario_id": "SCEN-012",
     "channel": "sms",
     "is_phishing": true,
     "difficulty": 3,
@@ -226,7 +226,7 @@
     ]
   },
   {
-    "scenario_id": "SC-013",
+    "scenario_id": "SCEN-013",
     "channel": "email",
     "is_phishing": true,
     "difficulty": 4,
@@ -249,7 +249,7 @@
     ]
   },
   {
-    "scenario_id": "SC-014",
+    "scenario_id": "SCEN-014",
     "channel": "email",
     "is_phishing": true,
     "difficulty": 5,
@@ -271,7 +271,7 @@
     ]
   },
   {
-    "scenario_id": "SC-015",
+    "scenario_id": "SCEN-015",
     "channel": "email",
     "is_phishing": false,
     "difficulty": 3,
@@ -285,7 +285,7 @@
     "policy_refs": []
   },
   {
-    "scenario_id": "SC-016",
+    "scenario_id": "SCEN-016",
     "channel": "email",
     "is_phishing": false,
     "difficulty": 4,
@@ -299,7 +299,7 @@
     "policy_refs": []
   },
   {
-    "scenario_id": "SC-017",
+    "scenario_id": "SCEN-017",
     "channel": "email",
     "is_phishing": true,
     "difficulty": 1,
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "scenario_id": "SC-018",
+    "scenario_id": "SCEN-018",
     "channel": "email",
     "is_phishing": true,
     "difficulty": 2,
@@ -349,7 +349,7 @@
     ]
   },
   {
-    "scenario_id": "SC-019",
+    "scenario_id": "SCEN-019",
     "channel": "sms",
     "is_phishing": true,
     "difficulty": 3,
@@ -372,7 +372,7 @@
     ]
   },
   {
-    "scenario_id": "SC-020",
+    "scenario_id": "SCEN-020",
     "channel": "email",
     "is_phishing": true,
     "difficulty": 4,
@@ -395,7 +395,7 @@
     ]
   },
   {
-    "scenario_id": "SC-021",
+    "scenario_id": "SCEN-021",
     "channel": "email",
     "is_phishing": true,
     "difficulty": 4,
@@ -418,7 +418,7 @@
     ]
   },
   {
-    "scenario_id": "SC-022",
+    "scenario_id": "SCEN-022",
     "channel": "email",
     "is_phishing": true,
     "difficulty": 5,
@@ -440,7 +440,7 @@
     ]
   },
   {
-    "scenario_id": "SC-023",
+    "scenario_id": "SCEN-023",
     "channel": "sms",
     "is_phishing": true,
     "difficulty": 5,
@@ -461,7 +461,7 @@
     ]
   },
   {
-    "scenario_id": "SC-024",
+    "scenario_id": "SCEN-024",
     "channel": "email",
     "is_phishing": false,
     "difficulty": 2,
@@ -475,7 +475,7 @@
     "policy_refs": []
   },
   {
-    "scenario_id": "SC-025",
+    "scenario_id": "SCEN-025",
     "channel": "email",
     "is_phishing": false,
     "difficulty": 3,
@@ -489,7 +489,7 @@
     "policy_refs": []
   },
   {
-    "scenario_id": "SC-026",
+    "scenario_id": "SCEN-026",
     "channel": "email",
     "is_phishing": false,
     "difficulty": 4,
@@ -503,7 +503,7 @@
     "policy_refs": []
   },
   {
-    "scenario_id": "SC-027",
+    "scenario_id": "SCEN-027",
     "channel": "email",
     "is_phishing": false,
     "difficulty": 4,
@@ -517,7 +517,7 @@
     "policy_refs": []
   },
   {
-    "scenario_id": "SC-028",
+    "scenario_id": "SCEN-028",
     "channel": "email",
     "is_phishing": false,
     "difficulty": 5,
@@ -531,7 +531,7 @@
     "policy_refs": []
   },
   {
-    "scenario_id": "SC-029",
+    "scenario_id": "SCEN-029",
     "channel": "email",
     "is_phishing": false,
     "difficulty": 5,
@@ -545,7 +545,7 @@
     "policy_refs": []
   },
   {
-    "scenario_id": "SC-030",
+    "scenario_id": "SCEN-030",
     "channel": "email",
     "is_phishing": false,
     "difficulty": 5,
