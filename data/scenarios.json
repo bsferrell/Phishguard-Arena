@@ -185,14 +185,14 @@
     "subject": "Mandatory Compliance Sign-Off Due Today",
     "body": "From: Hospital Payroll Alerts <fozer.payroll.updates@gmail.com>\n\nDear Employee,\n\nOur annual compensation compliance audit closes in 2 hours. You must open the attached compliance spreadsheet and enable editing immediately, or your Friday PayGet direct deposit will be held.\n\nAttachment: PayGet_2026_Compliance_Audit.xlsm\n\nHR Operations",
     "warning_signs": [
-      "odd_sender",
-      "generic_greeting",
-      "urgent_pressure",
-      "unexpected_attachment"
+      "Odd_Sender",
+      "Generic_Greeting",
+      "Urgent_Request",
+      "Unexpected_Attachment"
     ],
     "decoy_signs": [
-      "mismatched_link",
-      "credential_prompt"
+      "Mismatched_Link",
+      "Unexpected_Request_for_Credentials"
     ],
     "policy_refs": [
       "POLICY-ODD01",
@@ -210,13 +210,13 @@
     "subject": "",
     "body": "From: 48219\n\nHi Trevor, Fozer Memorial IT detected unusual Microsoft 365 login attempts. Sign in and confirm your password within 30 minutes or your account will be locked: [Verify M365 Account](http://198.51.100.84/m365-check)",
     "warning_signs": [
-      "suspicious_url",
-      "credential_prompt",
-      "urgent_pressure"
+      "Suspicious_URL",
+      "Unexpected_Request_for_Credentials",
+      "Urgent_Request"
     ],
     "decoy_signs": [
-      "unexpected_attachment",
-      "sensitive_data_request"
+      "Unexpected_Attachment",
+      "Sensitive_Information_Request"
     ],
     "policy_refs": [
       "POLICY-DOMAIN01",
@@ -233,13 +233,13 @@
     "subject": "AssistPoint Access Request #8194 Pending Your Approval",
     "body": "From: AssistPoint Notifications <noreply@fozermemoria1.org>\n\nHello Dr. Patel,\n\nAn IT permissions update for your department was logged in AssistPoint under ticket #8194. Please sign in with your Microsoft 365 username and password to review and approve the pending role change when you have a moment today:\n\n[https://portal.fozermemorial.org/assistpoint/8194](https://portal.fozermemoria1.org/assistpoint/8194)\n\nThank you,\nIT Service Desk\nFozer Memorial Hospital",
     "warning_signs": [
-      "lookalike_domain",
-      "mismatched_link",
-      "credential_prompt"
+      "Lookalike_Domain",
+      "Mismatched_Link",
+      "Unexpected_Request_for_Credentials"
     ],
     "decoy_signs": [
-      "urgent_pressure",
-      "unexpected_attachment"
+      "Urgent_Request",
+      "Unexpected_Attachment"
     ],
     "policy_refs": [
       "POLICY-DOMAIN02",
@@ -256,12 +256,12 @@
     "subject": "Q3 Inpatient Claim Reconciliation: Cardiology Unit",
     "body": "From: Karen Alvarez <kalvarez@fozer-memorial.org>\n\nHi Steven,\n\nOur Billing team is finalizing the Q3 insurer reconciliation for Cardiology Unit inpatient stays. Could you please send over the spreadsheet containing patient full names, dates of birth, and medical record numbers for the October 14 through October 20 admissions so we can close out the batch?\n\nI appreciate your help whenever you have time this afternoon.\n\nBest,\nKaren Alvarez\nSenior Revenue Cycle Analyst\nFozer Memorial Hospital",
     "warning_signs": [
-      "lookalike_domain",
-      "sensitive_data_request"
+      "Lookalike_Domain",
+      "Sensitive_Information_Request"
     ],
     "decoy_signs": [
-      "urgent_pressure",
-      "generic_greeting"
+      "Urgent_Request",
+      "Generic_Greeting"
     ],
     "policy_refs": [
       "POLICY-DOMAIN02",
@@ -279,8 +279,8 @@
     "body": "From: Payroll Operations <payroll@fozermemorial.org>\n\nHi Monica,\n\nBecause of the upcoming holiday banking schedule, Payroll is processing this cycle's PayGet run earlier than usual. Department supervisors are asked to review and approve staff hours inside PayGet before Wednesday at 2:00 PM so our Billing and Finance teams can finalize the file on schedule.\n\nYou can open your supervisor dashboard directly through the staff portal:\n[https://portal.fozermemorial.org/payget](https://portal.fozermemorial.org/payget)\n\nDo not reply to this email with employee pay details. If you need assistance, open a ticket in AssistPoint or call extension 2210.\n\nThank you,\nPayroll Operations\nFozer Memorial Hospital",
     "warning_signs": [],
     "decoy_signs": [
-      "lookalike_domain",
-      "credential_prompt"
+      "Lookalike_Domain",
+      "Unexpected_Request_for_Credentials"
     ],
     "policy_refs": []
   },
@@ -293,12 +293,11 @@
     "body": "From: IT Operations <it-operations@fozermemorial.org>\n\nHello Angela,\n\nOur IT team is applying a high-priority Microsoft 365 mobile sync patch tonight at 11:00 PM to resolve intermittent Outlook delays reported across inpatient units today. If you use Outlook on a hospital-issued tablet during the night shift, please save any draft messages before 10:55 PM so nothing is lost during the brief restart.\n\nYou can view affected units and status updates on the staff portal:\n[https://portal.fozermemorial.org/it/status](https://portal.fozermemorial.org/it/status)\n\nNo login or password action is required from staff. If issues persist after midnight, please submit an AssistPoint ticket or call the Helpdesk at extension 4100.\n\nRegards,\nIT Operations\nFozer Memorial Hospital",
     "warning_signs": [],
     "decoy_signs": [
-      "mismatched_link",
-      "credential_prompt"
+      "Mismatched_Link",
+      "Unexpected_Request_for_Credentials"
     ],
     "policy_refs": []
   },
-  [
   {
     "scenario_id": "SC-017",
     "channel": "email",
@@ -559,5 +558,4 @@
     ],
     "policy_refs": []
   }
-]
 ]
