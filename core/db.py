@@ -152,6 +152,18 @@ def recent_results(conn, learner_id: str) -> list[bool]:
     ).fetchall()
     return [bool(r["correct"]) for r in rows]
 
+def get_attempt(conn, attempt_id: int):
+    return conn.execute(
+        "SELECT * FROM attempts WHERE attempt_id = ?", (attempt_id,)
+    ).fetchone()
+
+
+def times_missed(conn, learner_id: str, sign: str) -> int:
+    """How many of this learner's attempts missed the given sign."""
+    rows = conn.execute(
+        "SELECT missed FROM attempts WHERE learner_id = ?", (learner_id,)
+    ).fetchall()
+    return sum(1 for r in rows if sign in json.loads(r["missed"]))
 
 # Mastery
 

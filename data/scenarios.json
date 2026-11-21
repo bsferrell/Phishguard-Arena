@@ -176,5 +176,388 @@
       "Odd_Sender"
     ],
     "policy_refs": []
+  },
+  {
+    "scenario_id": "SC-011",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 2,
+    "subject": "Mandatory Compliance Sign-Off Due Today",
+    "body": "From: Hospital Payroll Alerts <fozer.payroll.updates@gmail.com>\n\nDear Employee,\n\nOur annual compensation compliance audit closes in 2 hours. You must open the attached compliance spreadsheet and enable editing immediately, or your Friday PayGet direct deposit will be held.\n\nAttachment: PayGet_2026_Compliance_Audit.xlsm\n\nHR Operations",
+    "warning_signs": [
+      "odd_sender",
+      "generic_greeting",
+      "urgent_pressure",
+      "unexpected_attachment"
+    ],
+    "decoy_signs": [
+      "mismatched_link",
+      "credential_prompt"
+    ],
+    "policy_refs": [
+      "POLICY-ODD01",
+      "POLICY-GREET01",
+      "POLICY-URG01",
+      "POLICY-ATT01",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-012",
+    "channel": "sms",
+    "is_phishing": true,
+    "difficulty": 3,
+    "subject": "",
+    "body": "From: 48219\n\nHi Trevor, Fozer Memorial IT detected unusual Microsoft 365 login attempts. Sign in and confirm your password within 30 minutes or your account will be locked: [Verify M365 Account](http://198.51.100.84/m365-check)",
+    "warning_signs": [
+      "suspicious_url",
+      "credential_prompt",
+      "urgent_pressure"
+    ],
+    "decoy_signs": [
+      "unexpected_attachment",
+      "sensitive_data_request"
+    ],
+    "policy_refs": [
+      "POLICY-DOMAIN01",
+      "POLICY-DATA02",
+      "POLICY-URG01",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-013",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 4,
+    "subject": "AssistPoint Access Request #8194 Pending Your Approval",
+    "body": "From: AssistPoint Notifications <noreply@fozermemoria1.org>\n\nHello Dr. Patel,\n\nAn IT permissions update for your department was logged in AssistPoint under ticket #8194. Please sign in with your Microsoft 365 username and password to review and approve the pending role change when you have a moment today:\n\n[https://portal.fozermemorial.org/assistpoint/8194](https://portal.fozermemoria1.org/assistpoint/8194)\n\nThank you,\nIT Service Desk\nFozer Memorial Hospital",
+    "warning_signs": [
+      "lookalike_domain",
+      "mismatched_link",
+      "credential_prompt"
+    ],
+    "decoy_signs": [
+      "urgent_pressure",
+      "unexpected_attachment"
+    ],
+    "policy_refs": [
+      "POLICY-DOMAIN02",
+      "POLICY-LINK01",
+      "POLICY-DATA02",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-014",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 5,
+    "subject": "Q3 Inpatient Claim Reconciliation: Cardiology Unit",
+    "body": "From: Karen Alvarez <kalvarez@fozer-memorial.org>\n\nHi Steven,\n\nOur Billing team is finalizing the Q3 insurer reconciliation for Cardiology Unit inpatient stays. Could you please send over the spreadsheet containing patient full names, dates of birth, and medical record numbers for the October 14 through October 20 admissions so we can close out the batch?\n\nI appreciate your help whenever you have time this afternoon.\n\nBest,\nKaren Alvarez\nSenior Revenue Cycle Analyst\nFozer Memorial Hospital",
+    "warning_signs": [
+      "lookalike_domain",
+      "sensitive_data_request"
+    ],
+    "decoy_signs": [
+      "urgent_pressure",
+      "generic_greeting"
+    ],
+    "policy_refs": [
+      "POLICY-DOMAIN02",
+      "POLICY-DATA01",
+      "POLICY-DATA03",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-015",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 3,
+    "subject": "Early Timesheet Approval Window for Holiday Payroll Run",
+    "body": "From: Payroll Operations <payroll@fozermemorial.org>\n\nHi Monica,\n\nBecause of the upcoming holiday banking schedule, Payroll is processing this cycle's PayGet run earlier than usual. Department supervisors are asked to review and approve staff hours inside PayGet before Wednesday at 2:00 PM so our Billing and Finance teams can finalize the file on schedule.\n\nYou can open your supervisor dashboard directly through the staff portal:\n[https://portal.fozermemorial.org/payget](https://portal.fozermemorial.org/payget)\n\nDo not reply to this email with employee pay details. If you need assistance, open a ticket in AssistPoint or call extension 2210.\n\nThank you,\nPayroll Operations\nFozer Memorial Hospital",
+    "warning_signs": [],
+    "decoy_signs": [
+      "lookalike_domain",
+      "credential_prompt"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SC-016",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 4,
+    "subject": "IT Advisory: Microsoft 365 Mobile Sync Update Tonight at 11:00 PM",
+    "body": "From: IT Operations <it-operations@fozermemorial.org>\n\nHello Angela,\n\nOur IT team is applying a high-priority Microsoft 365 mobile sync patch tonight at 11:00 PM to resolve intermittent Outlook delays reported across inpatient units today. If you use Outlook on a hospital-issued tablet during the night shift, please save any draft messages before 10:55 PM so nothing is lost during the brief restart.\n\nYou can view affected units and status updates on the staff portal:\n[https://portal.fozermemorial.org/it/status](https://portal.fozermemorial.org/it/status)\n\nNo login or password action is required from staff. If issues persist after midnight, please submit an AssistPoint ticket or call the Helpdesk at extension 4100.\n\nRegards,\nIT Operations\nFozer Memorial Hospital",
+    "warning_signs": [],
+    "decoy_signs": [
+      "mismatched_link",
+      "credential_prompt"
+    ],
+    "policy_refs": []
+  },
+  [
+  {
+    "scenario_id": "SC-017",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 1,
+    "subject": "URGENT: Your Fozer M365 Mailbox Will Be Deleted Today",
+    "body": "From: M365 Admin <alert-desk-88@fastmail-notices.biz>\n\nDear User,\n\nURGENT!! Your Fozer Memorial Hospital Microsoft 365 mailbox is over quota and will be DELETED permanently in 1 hour. Click the link below right now to unlock your storage before your emails are lost forever!!\n\n[Unlock Mailbox Storage](http://203.0.113.45/fozer-quota-fix)\n\nHelp Desk Team",
+    "warning_signs": [
+      "Odd_Sender",
+      "Generic_Greeting",
+      "Urgent_Request",
+      "Suspicious_URL"
+    ],
+    "decoy_signs": [
+      "Unexpected_Attachment",
+      "Mismatched_Link"
+    ],
+    "policy_refs": [
+      "POLICY-ODD01",
+      "POLICY-GREET01",
+      "POLICY-URG01",
+      "POLICY-DOMAIN01",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-018",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 2,
+    "subject": "Mid-Year Payroll Verification Form Required",
+    "body": "From: HR Benefits Desk <benefits-review@yahoo.com>\n\nHello Staff Member,\n\nAs part of our mid-year payroll audit, please review the attached employee verification form, enter your Social Security number and bank routing details, and email the completed file back to this address.\n\nAttachment: PayGet_Payroll_Verification.docx\n\nThank you,\nHR Payroll Team",
+    "warning_signs": [
+      "Odd_Sender",
+      "Generic_Greeting",
+      "Unexpected_Attachment",
+      "Sensitive_Information_Request"
+    ],
+    "decoy_signs": [
+      "Suspicious_URL",
+      "Mismatched_Link"
+    ],
+    "policy_refs": [
+      "POLICY-ODD01",
+      "POLICY-GREET01",
+      "POLICY-ATT01",
+      "POLICY-DATA01",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-019",
+    "channel": "sms",
+    "is_phishing": true,
+    "difficulty": 3,
+    "subject": "",
+    "body": "From: Fozer IT Alert <73491>\n\nHi Brenda, your PayGet session expired after a system update. Sign in with your username and password within 45 minutes or your payroll access will be suspended: [Restore PayGet Access](http://payget-check.top/login)",
+    "warning_signs": [
+      "Suspicious_URL",
+      "Urgent_Request",
+      "Unexpected_Request_for_Credentials"
+    ],
+    "decoy_signs": [
+      "Generic_Greeting",
+      "Unexpected_Attachment"
+    ],
+    "policy_refs": [
+      "POLICY-DOMAIN01",
+      "POLICY-URG01",
+      "POLICY-DATA02",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-020",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 4,
+    "subject": "Billing Workflow Update: AssistPoint Vendor Routing Guide",
+    "body": "From: Billing Compliance <billing@fozermemorial-portal.com>\n\nHello Maya,\n\nOur Billing department has updated the AssistPoint vendor approval workflow for inpatient supply invoices. Please open the notice below to review the updated routing guide; your browser will pass through our external verification redirect before loading the portal:\n\n[https://portal.fozermemorial.org/billing/workflow](https://fozermemorial-portal.com/redirect?target=https://vendor-auth-bridge.com/assistpoint)\n\nRegards,\nBilling Operations\nFozer Memorial Hospital",
+    "warning_signs": [
+      "Lookalike_Domain",
+      "Mismatched_Link",
+      "Unexpected_Redirect"
+    ],
+    "decoy_signs": [
+      "Generic_Greeting",
+      "Urgent_Request"
+    ],
+    "policy_refs": [
+      "POLICY-DOMAIN02",
+      "POLICY-LINK01",
+      "POLICY-RED01",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-021",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 4,
+    "subject": "M365 Shared Mailbox Access Report for Review",
+    "body": "From: IT Security Operations <security@fozermemoria1.org>\n\nHi Gregory,\n\nPlease review the attached Microsoft 365 shared-mailbox access report for your unit. When you open the HTML file, sign in with your Fozer Memorial network password to view the updated permissions list.\n\nAttachment: M365_Shared_Access_Report.html\n\nBest regards,\nIT Security Operations\nFozer Memorial Hospital",
+    "warning_signs": [
+      "Lookalike_Domain",
+      "Unexpected_Attachment",
+      "Unexpected_Request_for_Credentials"
+    ],
+    "decoy_signs": [
+      "Urgent_Request",
+      "Generic_Greeting"
+    ],
+    "policy_refs": [
+      "POLICY-DOMAIN02",
+      "POLICY-ATT01",
+      "POLICY-DATA02",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-022",
+    "channel": "email",
+    "is_phishing": true,
+    "difficulty": 5,
+    "subject": "Inpatient Pharmacy Antimicrobial Stewardship Review",
+    "body": "From: Dr. Miriam Foster <mfoster@fozer-memorial.org>\n\nHi Ethan,\n\nWe are compiling the monthly antimicrobial stewardship review for the inpatient Pharmacy unit. When you have a quiet moment this afternoon, could you reply with the patient names, medical record numbers, and vancomycin dosing dates for ICU Wing B from last week?\n\nThank you for the help,\nDr. Miriam Foster\nClinical Pharmacy Lead\nFozer Memorial Hospital",
+    "warning_signs": [
+      "Lookalike_Domain",
+      "Sensitive_Information_Request"
+    ],
+    "decoy_signs": [
+      "Urgent_Request",
+      "Unexpected_Attachment"
+    ],
+    "policy_refs": [
+      "POLICY-DOMAIN02",
+      "POLICY-DATA01",
+      "POLICY-DATA03",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-023",
+    "channel": "sms",
+    "is_phishing": true,
+    "difficulty": 5,
+    "subject": "",
+    "body": "From: AssistPoint Updates <73491>\n\nHi Hannah, your AssistPoint queue permissions were updated for this week's shift schedule. Review the change summary here: [https://portal.fozermemorial.org/assistpoint](https://sso.assistpoint-cloud.com/redirect?next=https://verify-session.com/assistpoint)",
+    "warning_signs": [
+      "Mismatched_Link",
+      "Unexpected_Redirect"
+    ],
+    "decoy_signs": [
+      "Generic_Greeting",
+      "Unexpected_Attachment"
+    ],
+    "policy_refs": [
+      "POLICY-LINK01",
+      "POLICY-RED01",
+      "POLICY-REP01"
+    ]
+  },
+  {
+    "scenario_id": "SC-024",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 2,
+    "subject": "Employee Health Flu Vaccination Clinic Schedule",
+    "body": "From: Employee Health & HR <hr-wellness@fozermemorial.org>\n\nHi Kevin,\n\nWalk-in flu vaccination clinics for Fozer Memorial Hospital staff are open in Conference Room B throughout next week. You can view clinic hours and sign up for a time slot on the staff portal:\n\n[Staff Wellness Portal](https://portal.fozermemorial.org/hr/wellness)\n\nThank you,\nEmployee Health & HR\nFozer Memorial Hospital",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Urgent_Request",
+      "Unexpected_Request_for_Credentials"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SC-025",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 3,
+    "subject": "AssistPoint Ticket #AP-51084 Resolved",
+    "body": "From: IT Service Desk <assistpoint@fozermemorial.org>\n\nHello Naomi,\n\nYour AssistPoint request (#AP-51084) regarding the 3rd-floor nursing station label printer has been resolved by our desktop support team. You can review the technician's closing notes directly on the portal:\n\n[https://portal.fozermemorial.org/assistpoint/tickets/51084](https://portal.fozermemorial.org/assistpoint/tickets/51084)\n\nBest regards,\nIT Service Desk\nFozer Memorial Hospital",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Lookalike_Domain",
+      "Unexpected_Attachment"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SC-026",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 4,
+    "subject": "Early PayGet Timecard Cutoff for Holiday Payroll",
+    "body": "From: Payroll Services <payroll@fozermemorial.org>\n\nHi Daniel,\n\nBecause of the upcoming bank holiday schedule, Payroll is processing this cycle's PayGet run one day earlier than usual. Supervisors are asked to approve department timecards in PayGet before Wednesday at 2:00 PM.\n\nOpen your dashboard through the official staff portal:\n[https://portal.fozermemorial.org/payget/timecards](https://portal.fozermemorial.org/payget/timecards)\n\nDo not reply to this email with banking or tax information. Questions can be directed to Payroll at extension 2210.\n\nThank you,\nPayroll Services\nFozer Memorial Hospital",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Sensitive_Information_Request",
+      "Mismatched_Link"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SC-027",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 4,
+    "subject": "Pharmacy Dispensing Cabinet Maintenance Window Tonight",
+    "body": "From: Pharmacy Informatics <pharmacy-it@fozermemorial.org>\n\nHello Dr. Morales,\n\nPharmacy Informatics is applying a scheduled firmware update to automated dispensing cabinets on Units 2A and 2B tonight from 1:00 AM to 2:00 AM. Please review the downtime override workflow on the staff portal ahead of tonight's shift change:\n\n[https://portal.fozermemorial.org/pharmacy/downtime](https://portal.fozermemorial.org/pharmacy/downtime)\n\nIf you need immediate assistance during the window, contact the Pharmacy on-call pager or open an AssistPoint ticket.\n\nRegards,\nPharmacy Informatics\nFozer Memorial Hospital",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Unexpected_Request_for_Credentials",
+      "Odd_Sender"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SC-028",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 5,
+    "subject": "Quarterly Microsoft 365 Shared Mailbox Permission Audit",
+    "body": "From: Microsoft 365 Administration <m365-admin@fozermemorial.org>\n\nHi Rachelle,\n\nIT is conducting our routine quarterly review of shared Microsoft 365 mailboxes across Billing and HR. No password entry or email reply is needed; if you manage a shared inbox, please review your listed delegates on the internal portal by next Friday:\n\n[https://portal.fozermemorial.org/it/m365-access](https://portal.fozermemorial.org/it/m365-access)\n\nTo request changes, submit an AssistPoint ticket from the portal.\n\nSincerely,\nMicrosoft 365 Administration\nFozer Memorial Hospital",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Lookalike_Domain",
+      "Unexpected_Request_for_Credentials"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SC-029",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 5,
+    "subject": "Annual HIPAA Privacy and Billing Compliance Refresher",
+    "body": "From: Compliance & Billing Education <compliance@fozermemorial.org>\n\nGood afternoon Omar,\n\nThe annual HIPAA patient privacy and Billing compliance refresher module is now open for all Fozer Memorial Hospital employees. Please complete the 20-minute module through our learning section on the staff portal before the end of the month:\n\n[https://portal.fozermemorial.org/hr/training](https://portal.fozermemorial.org/hr/training)\n\nDo not send personal or patient records via email in response to this notice.\n\nThank you,\nCompliance & Billing Education\nFozer Memorial Hospital",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Sensitive_Information_Request",
+      "Generic_Greeting"
+    ],
+    "policy_refs": []
+  },
+  {
+    "scenario_id": "SC-030",
+    "channel": "email",
+    "is_phishing": false,
+    "difficulty": 5,
+    "subject": "PayGet HSA Contribution Elections for Next Plan Year",
+    "body": "From: HR Benefits Team <hr-benefits@fozermemorial.org>\n\nHello Patricia,\n\nEmployees enrolled in a high-deductible health plan can review or adjust their PayGet HSA contribution elections for the upcoming plan year before the enrollment window closes on December 15. No action is needed if you want to keep your current elections.\n\nManage your selections directly on the official portal:\n[https://portal.fozermemorial.org/payget/benefits](https://portal.fozermemorial.org/payget/benefits)\n\nNever email Social Security numbers or bank account details to HR.\n\nWarm regards,\nHR Benefits Team\nFozer Memorial Hospital",
+    "warning_signs": [],
+    "decoy_signs": [
+      "Urgent_Request",
+      "Unexpected_Redirect"
+    ],
+    "policy_refs": []
   }
+]
 ]
