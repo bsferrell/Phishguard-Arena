@@ -33,13 +33,29 @@ sh setup.sh
 powershell -ExecutionPolicy Bypass -File .\setup.ps1
 ```
 
-Once setup succeeds, optionally configure Gemini as described in step 4, then run the start command printed by the script. The Windows command bypasses the execution policy for that PowerShell process only.
+Once setup succeeds, optionally configure Gemini as described in step 4. The scripts do not activate the virtual environment in your current terminal. Before starting the game, activate it from the project folder:
+
+**macOS:**
+
+```shell
+source .venv/bin/activate
+python -m streamlit run app.py
+```
+
+**Windows (PowerShell):**
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m streamlit run app.py
+```
+
+If PowerShell blocks activation, see the execution-policy guidance in step 2. The setup command above bypasses the execution policy only for the process running the script, not for your current PowerShell session. Alternatively, start the game without activation using the command printed by the script.
 
 The scripts create or reuse `.venv`, install dependencies, check SQLite FTS5, and seed the database only if `data/phishguard.db` does not already exist. The repository includes an existing database; the scripts leave it and any existing progress unchanged. To create a fresh database, first move the existing file somewhere safe, then rerun the script. Neither script creates an API key; see the optional Gemini configuration below. If installation fails, see the troubleshooting guidance in step 3.
 
 ### Manual setup
 
-If you used a setup script, skip to step 4 to optionally configure Gemini, then start the game using the command above.
+If you used a setup script, skip to step 4 to optionally configure Gemini, then activate the virtual environment and start the game as shown above. Do not run the seed command in step 5 unless you intend to reseed.
 
 ### 2. Create and activate a virtual environment
 
@@ -75,12 +91,41 @@ python -m pip install --only-binary=:all: "cryptography>=38.0.3"
 python -m pip install -r requirements.txt
 ```
 
-If no compatible wheel is available on macOS, install OpenSSL and pkg-config with [Homebrew](https://brew.sh/), then retry:
+If no compatible wheel is available on macOS, building `cryptography` requires Apple's command-line tools, OpenSSL, and Rust. Install the command-line tools if they are not already installed:
 
 ```shell
-brew install openssl@3 pkg-config
-OPENSSL_DIR="$(brew --prefix openssl@3)" python -m pip install -r requirements.txt
+xcode-select --install
 ```
+
+Complete the installer before continuing. Choose **one** of the following options; you do not need both package managers. If you already have one installed, skip its installation step. For other installations or build problems, see the [cryptography installation guide](https://cryptography.io/en/latest/installation/#building-cryptography-on-macos).
+
+**Option A: Homebrew**
+
+1. If Homebrew is not installed, run the [official installer](https://brew.sh/) in Terminal:
+
+   ```shell
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+   Follow the installer's instructions, including any steps it prints to add Homebrew to your shell's `PATH`. Confirm that `brew --version` works.
+2. From the project folder, with `.venv` active, install the build dependencies and retry:
+
+   ```shell
+   brew install openssl@3 pkg-config rust
+   OPENSSL_DIR="$(brew --prefix openssl@3)" python -m pip install -r requirements.txt
+   ```
+
+**Option B: MacPorts**
+
+1. If MacPorts is not installed, download the `.pkg` installer for your macOS version from the [MacPorts installation page](https://www.macports.org/install.php), open it, and follow the installer. Open a new Terminal window and confirm that `port version` works.
+2. Return to the project folder and reactivate the virtual environment with `source .venv/bin/activate`, then install the build dependencies and retry:
+
+   ```shell
+   sudo port install openssl pkgconfig rust
+   OPENSSL_DIR=/opt/local python -m pip install -r requirements.txt
+   ```
+
+The MacPorts command assumes the default `/opt/local` installation prefix; use your prefix instead if you installed MacPorts elsewhere. If the Rust version supplied by your package manager is too old for the version of `cryptography` being built, follow the [Rust installation instructions](https://www.rust-lang.org/tools/install).
 
 The OpenSSL libraries must match the Python interpreter's architecture (for example, x86_64 or arm64).
 
@@ -96,7 +141,7 @@ Keep the key private; `.env` is ignored by Git. Without a key, or if the Gemini 
 
 ### 5. Seed the database and start the game
 
-Run these commands from the project root:
+With the virtual environment active, run these commands from the project root:
 
 ```shell
 python check_fts5.py
